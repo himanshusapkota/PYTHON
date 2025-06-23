@@ -1,22 +1,34 @@
 import random
 
-def rps():
-    choices = ['rock', 'paper', 'scissors']
-    while True:
-        user = input("Choose rock, paper or scissors: ").lower()
-        if user not in choices:
-            print("Invalid choice.")
-            continue
-        comp = random.choice(choices)
-        print(f"Computer chose {comp}.")
-        if user == comp:
-            print("It's a tie!")
-        elif (user == 'rock' and comp == 'scissors') or (user == 'scissors' and comp == 'paper') or (user == 'paper' and comp == 'rock'):
-            print("You win!")
-        else:
-            print("You lose.")
-        again = input("Play again? (yes/no): ").lower()
-        if again != 'yes':
-            break
+options = ("rock", "paper", "scissors")
+player = None
 
-rps()
+
+while player not in options:
+    player = input("Enter a choice (rock, paper, scissors): ")
+
+
+computer = random.choice(options)
+
+print(f"Player: {player}")
+print(f"Computer: {computer}")
+
+if player == computer:
+    print("Its a tie! ")
+
+elif player=="rock" and computer==" scisssors ":
+    print("You won!")
+
+elif player=="paper" and computer==" rock ":
+    print("You Won!")
+
+elif player=="scissor" and computer==" paper ":
+    print("You Won!")
+
+else:
+    print("Computer Won")
+
+
+
+
+
